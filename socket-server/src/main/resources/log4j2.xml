@@ -7,7 +7,7 @@
         <Property name="LOG_PREFIX">${APP_NAME}</Property>
         <Property name="LOG_CHARSET">UTF-8</Property>
         <Property name="LOG_DIR">${LOG_HOME}/%d{yyyyMMdd}</Property>
-        <Property name="LOG_MSG">- |[%X{requestId}]|[%d{yyyyMMdd HH:mm:ss.SSS}]|[%level]|[${hostName}]|[%thread]|[%logger{36}]||| %msg|%n</Property>
+        <Property name="LOG_MSG">- |[%X{requestId}]|[%d{yyyyMMdd HH:mm:ss.SSS}]|[%level]|[${hostName}]|[%thread]|[%logger{36}]| %msg|%n</Property>
         <Property name="MAX_FILE_SIZE">50MB</Property>
         <Property name="LOG_ROOT_LEVEL">DEBUG</Property><!-- 总体日志输出级别 -->
     </Properties>

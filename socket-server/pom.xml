@@ -36,6 +36,16 @@
 		</profile>
 	</profiles>
   	<dependencies>
+	  	<dependency> <!-- exclude掉spring-boot的默认log配置 -->  
+	        <groupId>org.springframework.boot</groupId>  
+	        <artifactId>spring-boot-starter</artifactId>  
+	        <exclusions>  
+	            <exclusion>  
+	                <groupId>org.springframework.boot</groupId>  
+	                <artifactId>spring-boot-starter-logging</artifactId>  
+	            </exclusion>  
+	        </exclusions>  
+	    </dependency>  
 		<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId>
@@ -44,39 +54,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>ch.qos.logback</groupId>
-					<artifactId>logback-classic</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
-					<!-- log -->
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-1.2-api</artifactId>
-				<version>${log4j2.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-core</artifactId>
-				<version>${log4j2.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-slf4j-impl</artifactId>
-				<version>${log4j2.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>jcl-over-slf4j</artifactId>
-				<version>${slf4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>jul-to-slf4j</artifactId>
-				<version>${slf4j.version}</version>
-			</dependency>
+		<dependency> <!-- 引入log4j2依赖 -->  
+	        <groupId>org.springframework.boot</groupId>  
+	        <artifactId>spring-boot-starter-log4j2</artifactId>  
+	    </dependency>  
 	</dependencies>
 	
 	<build>
