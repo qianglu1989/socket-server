@@ -17,8 +17,6 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<io.netty.ver>4.0.42.Final</io.netty.ver>
-		<slf4j.version>1.7.21</slf4j.version>
-		<log4j2.version>2.7</log4j2.version>
 	</properties>
 	
 	<profiles>
